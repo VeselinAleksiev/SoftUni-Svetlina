@@ -1,0 +1,22 @@
+using System;
+
+namespace Weekly engagement in hours
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int vtoromqsto = 15;
+            int purvomqsto = 8;
+            double purvomqstodni = double.Parse(Console.ReadLine());
+            if (purvomqstodni < 3 || purvomqstodni > 7)
+            {
+                Console.WriteLine($" {purvomqstodni} is invalid number.");
+            }
+            else if (purvomqstodni >= 3 && purvomqstodni <= 7)
+            {
+                Console.WriteLine($"{vtoromqsto + (purvomqsto * purvomqstodni)}");
+            }
+        }
+    }
+}
