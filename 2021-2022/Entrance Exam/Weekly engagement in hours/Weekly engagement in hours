@@ -1,6 +1,6 @@
 using System;
 
-namespace Weekly engagement in hours
+namespace Weekly_engagement_in_hours
 {
     class Program
     {
