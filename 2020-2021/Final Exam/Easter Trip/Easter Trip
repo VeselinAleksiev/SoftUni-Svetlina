@@ -1,0 +1,63 @@
+using System;
+
+namespace Easter Trip
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string country = Console.ReadLine();
+            string day = Console.ReadLine();
+            int nights = int.Parse(Console.ReadLine());
+            int sum = 0;
+            if (country == "France")
+            {
+                if (day == "21-23")
+                {
+                    sum = 30;
+                }
+                if (day == "24-27")
+                {
+                    sum = 35;
+                }
+                if (day == "28-31")
+                {
+                    sum = 40;
+                }
+            }
+            if (country == "Italy")
+            {
+                if (day == "21-23")
+                {
+                    sum = 28;
+                }
+                if (day == "24-27")
+                {
+                    sum = 32;
+                }
+                if (day == "28-31")
+                {
+                    sum = 39;
+                }
+            }
+            if (country == "Germany")
+            {
+                if (day == "21-23")
+                {
+                    sum = 32;
+                }
+                if (day == "24-27")
+                {
+                    sum = 37;
+                }
+                if (day == "28-31")
+                {
+                    sum = 43;
+
+                }
+            }
+            double total = nights * sum;
+            Console.WriteLine($"Easter trip to {country} : {total:F2} leva.");
+        }
+    }
+}
