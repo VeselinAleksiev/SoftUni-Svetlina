@@ -1,0 +1,44 @@
+using System;
+
+namespace Free_time
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string denzaproverka = Console.ReadLine();
+
+            int chaszaproverka = int.Parse(Console.ReadLine());
+            bool vqrno = false;
+            if (chaszaproverka < 10 || chaszaproverka > 22)
+            {
+
+                Console.WriteLine($"You cannot disturb Maria on {denzaproverka} at {chaszaproverka}.");
+            }
+            else
+            {
+                int rabotnidni = int.Parse(Console.ReadLine());
+                if (rabotnidni >= 9 || rabotnidni < 2)
+                {
+                    Console.WriteLine($"{rabotnidni} is invalid number.");
+                }
+                else
+                {
+                    for (int i = 1; i <= rabotnidni; i++)
+                    {
+                        string denzaproverkamaria = Console.ReadLine();
+                        if (denzaproverkamaria == denzaproverka)
+                        {
+                            vqrno = true;
+                        }
+                    }
+                    if (vqrno)
+                    {
+                        Console.WriteLine($"Maria isn't free on {denzaproverka} at {chaszaproverka}.");
+                    }
+                    else Console.WriteLine($"Maria is free on {denzaproverka} at {chaszaproverka}.");
+                }
+            }
+        }
+    }
+}
