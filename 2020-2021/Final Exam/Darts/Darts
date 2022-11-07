@@ -1,0 +1,70 @@
+using System;
+
+namespace ConsoleApp19
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string player = Console.ReadLine();
+            int startPoints = 301;
+            int successful = 0;
+            int unseccessful = 0;
+            while (startPoints != 0)
+            {
+                string shot = Console.ReadLine();
+                if (shot == "Retire")
+                {
+                    Console.WriteLine($"{player} retired after {unseccessful} unsuccessful shots.");
+                    break;
+                }
+                int points = int.Parse(Console.ReadLine());
+
+                if (shot == "Single") 
+                {
+                    if (points <= startPoints && startPoints > 0)
+                    {
+                        startPoints -= points;
+                        successful++;
+                    }
+                    else
+                    {
+                        unseccessful++;
+                    }
+                }
+
+                if (shot == "Double")
+                {
+                    points *= 2;
+                    if (points <= startPoints && startPoints > 0)
+                    {
+                        startPoints -= points;
+                        successful++;
+                    }
+                    else
+                    {
+                        unseccessful++;
+                    }
+                }
+                if (shot == "Triple")
+                {
+                    points *= 3;
+                    if (points <= startPoints && startPoints > 0)
+                    {
+                        startPoints -= points;
+                        successful++;
+                    }
+                    else
+                    {
+                        unseccessful++;
+                    }
+                }
+                if (startPoints == 0)
+                {
+                    Console.WriteLine($"{player} won the leg with {successful} shots.");
+                    break;
+                }
+            }
+        }
+    }
+}
