@@ -1,0 +1,37 @@
+using System;
+
+namespace Weekly_fee
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double parivtora = double.Parse(Console.ReadLine());
+            int rabotnidnipurva = int.Parse(Console.ReadLine());
+            double pari = parivtora * 3;
+            double pari2 = rabotnidnipurva * 60;
+            double total = pari + pari2;
+            string denotsedmica = Console.ReadLine();
+            if (rabotnidnipurva > 7 || rabotnidnipurva < 3)
+            {
+                Console.WriteLine($"{rabotnidnipurva} is invalid number.");
+            }
+            else
+            {
+                for (int i = 0; i < parivtora; i++)
+                {
+                    denotsedmica = Console.ReadLine();
+                    if (denotsedmica == "Friday")
+                    {
+                        total += 9;
+                    }
+                    else if (denotsedmica == "Saturday")
+                    {
+                        total += 9;
+                    }
+                }
+                Console.WriteLine($"{total:F2}");
+            }
+        }
+    }
+}
