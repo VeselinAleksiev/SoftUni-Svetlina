@@ -1,0 +1,18 @@
+using System;
+
+namespace ConsoleApp19
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int yearTax = int.Parse(Console.ReadLine());
+            double shoes = yearTax - (yearTax * 0.4);
+            double outfit = shoes - (shoes * 0.2);
+            double ball = 0.25 * outfit;
+            double acc = 0.20 * ball;
+            double total = yearTax + shoes + outfit + ball + acc;
+            Console.WriteLine($"{total:F2}");
+        }
+    }
+}
